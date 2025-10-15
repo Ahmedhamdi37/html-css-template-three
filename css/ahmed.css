@@ -49,6 +49,52 @@ a {
   }
 }
 /* End Global Rules */
+/* Start Main Title */
+.main-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border: 2px solid black;
+  width: fit-content;
+  margin: 50px auto;
+  transition: var(--main-transition);
+}
+
+.main-title::before,
+.main-title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transform: translateY(-50%);
+  transition: var(--main-transition);
+}
+.main-title::before {
+  left: -30px;
+}
+.main-title::after {
+  right: -30px;
+}
+.main-title:hover::before {
+  z-index: -1;
+  animation: left-move 0.5s linear forwards;
+}
+.main-title:hover::after {
+  z-index: -1;
+  animation: right-move 0.5s linear forwards;
+}
+.main-title:hover {
+  color: white;
+  border: 2px solid white;
+  transition-delay: 0.5s;
+}
+
+/* End Main Title */
 /* Start Header Section */
 .header {
   background-color: white;
@@ -313,6 +359,28 @@ a {
   40%,
   60% {
     transform: translateY(-15px);
+  }
+}
+@keyframes left-move {
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes right-move {
+  50% {
+    right: 0;
+  }
+  100% {
+    right: 0;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
