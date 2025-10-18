@@ -18,7 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Cairo";
+  font-family: 'Cairo';
 }
 ul {
   list-style: none;
@@ -67,7 +67,7 @@ a {
 
 .main-title::before,
 .main-title::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   width: 12px;
@@ -165,7 +165,7 @@ a {
   }
 }
 .header .main-nav > li > a::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 4px;
@@ -229,7 +229,7 @@ a {
   }
 }
 .header .mega-menu .links li::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -260,7 +260,7 @@ a {
   position: relative;
 }
 .landing::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: -50px;
@@ -358,8 +358,7 @@ a {
   background-color: white;
   box-shadow: 0 2px 15px rgb(0 0 0 / 10%);
   overflow: hidden;
-  transition: transform var(--main-transition),
-    box-shadow var(--main-transition);
+  transition: transform var(--main-transition), box-shadow var(--main-transition);
 }
 .articles .box:hover {
   transform: translateY(-10px);
@@ -428,7 +427,7 @@ a {
   transition: var(--main-transition);
 }
 .galary .container .box .image::before {
-  content: "";
+  content: '';
   position: absolute;
   background-color: rgb(255 255 255 /20%);
   width: 0;
@@ -464,7 +463,7 @@ a {
   overflow: hidden;
 }
 .features .img-holder::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   height: 100%;
@@ -481,7 +480,7 @@ a {
   background-color: rgb(3 169 244 / 60%);
 }
 .features .img-holder::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   right: 0;
@@ -506,7 +505,7 @@ a {
   position: relative;
 }
 .features .box h2::after {
-  content: "";
+  content: '';
   position: absolute;
   width: calc(100% - 30px);
   height: 5px;
@@ -559,7 +558,7 @@ a {
   color: white;
 }
 .features .box a::before {
-  content: "";
+  content: '';
   position: absolute;
   width: 0;
   height: 100%;
@@ -628,6 +627,98 @@ a {
   margin-top: 10px;
 }
 /* End Testimonials Section  */
+/* Start Team Members Section */
+.team-members {
+  padding-top: var(--main-padding-section);
+  padding-bottom: var(--main-padding-section);
+}
+.team-members .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 40px;
+  row-gap: 80px;
+}
+.team-members .container .box {
+  position: relative;
+}
+.team-members .container .box::before {
+  content: '';
+  position: absolute;
+  width: calc(100% - 60px);
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #f3f3f3;
+  z-index: -2;
+  border-radius: 6px;
+}
+.team-members .container .box::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.team-members .container .box:hover::after {
+  width: calc(100% - 60px);
+  background-color: #e4e4e4;
+}
+.team-members .container .box .data {
+  width: 360px;
+  height: 360px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 60px;
+}
+.team-members .container .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.team-members .container .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-members .container .box .data .social i {
+  color: #969696;
+  transition: var(--main-transition);
+}
+.team-members .container .box .data .social i:hover {
+  color: var(--main-color);
+}
+.team-members .container .box .data img {
+  width: 300px;
+  height: 300px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 7%);
+  transition: var(--main-transition);
+}
+.team-members .container .box:hover .data img {
+  filter: grayscale();
+}
+
+.team-members .container .info {
+  padding-left: 80px;
+  width: 360px;
+}
+.team-members .container .info h3 {
+  margin-top: 22px;
+  color: var(--main-color);
+}
+.team-members .container .info p {
+  margin: 10px 0 25px;
+}
+/* End Team Members Section */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
