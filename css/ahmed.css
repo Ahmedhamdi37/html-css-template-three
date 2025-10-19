@@ -808,6 +808,56 @@ a {
 }
 
 /* End Services Section */
+/* Start Our Skills Section */
+.our-skills {
+  padding-top: var(--main-padding-section);
+  padding-bottom: var(--main-padding-section);
+  background-color: white;
+}
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+.our-skills img {
+  width: 500px;
+}
+@media (max-width: 991px) {
+  .our-skills img {
+    display: none;
+  }
+}
+.our-skills .skills {
+  flex: 1;
+}
+.our-skills .skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 20px;
+  font-weight: 800;
+}
+.our-skills .skills .skill h3 > span {
+  color: var(--main-color);
+  padding: 3px 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.our-skills .skills .skill .the-progress {
+  position: relative;
+  height: 30px;
+  background-color: #eee;
+}
+.our-skills .skills .skill .the-progress span {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: var(--main-color);
+}
+
+/* End Our Skills Section */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
