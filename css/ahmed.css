@@ -1199,6 +1199,64 @@ a {
 }
 
 /* End Pricing Plans */
+/* Start Videos */
+.videos {
+  padding-top: var(--main-padding-section);
+  padding-bottom: var(--main-padding-section);
+}
+.videos .holder {
+  display: flex;
+  border: 1px solid #ddd;
+  text-transform: capitalize;
+  justify-content: center;
+}
+@media (max-width: 991px) {
+  .videos .holder {
+    flex-direction: column;
+  }
+}
+.videos .holder .list {
+  min-width: 300px;
+  background-color: white;
+}
+.videos .holder .list .name {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+.videos .holder .list ul li {
+  padding: 20px;
+  cursor: pointer;
+  border-top: 1px solid var(--section-background);
+  transition: var(--main-transition);
+}
+.videos .holder .list ul li:hover {
+  color: var(--main-color);
+}
+.videos .holder .list ul li span {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin-top: 10px;
+}
+.videos .holder .preview {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #e2e2e2;
+}
+.videos .holder .preview img {
+  max-width: 100%;
+}
+.videos .holder .preview .info {
+  background-color: white;
+  padding: 20px;
+  margin-top: 10px;
+}
+/* End Videos */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
