@@ -1257,6 +1257,84 @@ a {
   margin-top: 10px;
 }
 /* End Videos */
+/* Start Stats */
+.stats {
+  padding-top: var(--main-padding-section);
+  padding-bottom: var(--main-padding-section);
+  background-image: url(../imgs/stats.jpg);
+  background-size: cover;
+  min-width: 300px;
+  position: relative;
+}
+.stats::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+}
+.stats .container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.stats > h2 {
+  font-size: 40px;
+  font-weight: bold;
+  width: fit-content;
+  text-transform: capitalize;
+  margin: 0 auto 50px auto;
+}
+.stats .container .box {
+  background-color: white;
+  padding: 30px 15px;
+  text-align: center;
+  position: relative;
+  opacity: 0.8;
+  transition: var(--main-transition);
+}
+.stats .container .box:hover {
+  opacity: 1;
+}
+.stats .container .box::before,
+.stats .container .box::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--main-color);
+  transition: 1s;
+}
+.stats .container .box::before {
+  bottom: 0;
+  left: 0;
+}
+.stats .container .box:hover::before,
+.stats .container .box:hover::after {
+  height: 100%;
+}
+.stats .container .box::after {
+  top: 0;
+  right: 0;
+}
+.stats .container .box span {
+  display: block;
+}
+.stats .container .box .number {
+  margin: 10px 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+.stats .container .box .text {
+  color: var(--main-color);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* End Stats */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
