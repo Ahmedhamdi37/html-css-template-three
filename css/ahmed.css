@@ -1444,6 +1444,7 @@ a {
   border: none;
   cursor: pointer;
   transition: var(--main-transition);
+  margin: 20px 0;
 }
 .discount .form .content input[type='submit']:hover {
   background-color: var(--main-alternative-color);
